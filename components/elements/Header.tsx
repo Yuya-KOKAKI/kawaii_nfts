@@ -16,7 +16,7 @@ const Component: React.FC = () => {
       as="header"
       alignItems="center"
       position={'fixed'}
-      background="rgba(255, 255, 255, 0.95)"
+      background="rgba(230,230,250, 0.95)"
       backdropBlur="md"
       w="full"
       zIndex={10}
@@ -30,8 +30,8 @@ const Component: React.FC = () => {
         mx="auto"
       >
         <Link href="/">
-          <Text textStyle="logo" cursor="pointer">
-            NFTDrop
+          <Text textStyle="logo" cursor="pointer" fontSize="4xl">
+            ★ NFTミントサイト ★
           </Text>
         </Link>
         <Flex alignItems="center" gap={8}>
@@ -47,7 +47,20 @@ const Component: React.FC = () => {
                   fontWeight="bold"
                   cursor="pointer"
                 >
-                  MINT
+                  ミントページ
+                </Text>
+              </Link>
+              <Link href="/owned">
+                <Text
+                  as="a"
+                  borderBottom={`2px`}
+                  borderColor={
+                    router.pathname === '/owned' ? `black` : 'rgba(0,0,0,0)'
+                  }
+                  fontWeight="bold"
+                  cursor="pointer"
+                >
+                  所有NFT
                 </Text>
               </Link>
               <Link href="/collection">
@@ -62,20 +75,7 @@ const Component: React.FC = () => {
                   fontWeight="bold"
                   cursor="pointer"
                 >
-                  COLLECTION
-                </Text>
-              </Link>
-              <Link href="/owned">
-                <Text
-                  as="a"
-                  borderBottom={`2px`}
-                  borderColor={
-                    router.pathname === '/owned' ? `black` : 'rgba(0,0,0,0)'
-                  }
-                  fontWeight="bold"
-                  cursor="pointer"
-                >
-                  OWNED
+                  シリーズ内全NFT
                 </Text>
               </Link>
             </Flex>

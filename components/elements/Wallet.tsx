@@ -26,7 +26,7 @@ const Component: React.FC = () => {
               backgroundColor="black"
               w="10rem"
             >
-              <Text fontSize="xs">Disconnect Wallet</Text>
+              <Text fontSize="s">接続を解除</Text>
             </Button>
           ) : (
             <Button
@@ -36,7 +36,7 @@ const Component: React.FC = () => {
               color="white"
               w="10rem"
             >
-              <Text fontSize="xs">{truncate(address, 14)}</Text>
+              <Text fontSize="s">{truncate(address, 14)}</Text>
             </Button>
           )}
         </div>
@@ -47,7 +47,7 @@ const Component: React.FC = () => {
           textAlign="center"
           w="10rem"
         >
-          <Text fontSize="xs">Connect Wallet</Text>
+          <Text fontSize="s">ウォレット接続</Text>
         </Button>
       )}
     </>

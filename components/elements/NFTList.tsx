@@ -36,7 +36,7 @@ const Component: React.FC = () => {
               <div>
                 {!ownerExists ? (
                   <>
-                    No Owner
+                    オーナーなし
                     <br />
                     <br />
                   </>

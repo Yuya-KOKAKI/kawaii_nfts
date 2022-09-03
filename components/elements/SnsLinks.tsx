@@ -1,11 +1,11 @@
 import { Box, Flex } from '@chakra-ui/react'
 import Image from 'next/image'
 import {
-  discordUrl,
   explorerUrl,
   instagramUrl,
   openseaUrl,
   twitterUrl,
+  discordUrl,
 } from '../../utils/snsLinks'
 
 const LinkIcon: React.FC<{
@@ -55,10 +55,7 @@ const Component: React.FC = () => {
         func={discordUrl}
         icon={'/assets/logo/logo_black_discord.svg'}
       />
-      <LinkIcon
-        func={instagramUrl}
-        icon={'/assets/logo/logo_black_instagram.svg'}
-      />
+
     </Flex>
   )
 }

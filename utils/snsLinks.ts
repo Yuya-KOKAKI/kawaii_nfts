@@ -49,7 +49,7 @@ export const instagramUrl = () => {
 }
 
 export const discordUrl = () => {
-  return `${process.env.NEXT_PUBLIC_DISCORD_URL}`
+  return `https://discord.com/channels/${process.env.NEXT_PUBLIC_DISCORD_URL}`
 }
 
 export const snsLinks = {

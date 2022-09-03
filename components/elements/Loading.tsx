@@ -11,7 +11,7 @@ const Component = () => {
     >
       <VStack spacing={4}>
         <Spinner size="xl" />
-        <Text>Loading contract ...</Text>
+        <Text>コントラクトのロード中 ...</Text>
       </VStack>
     </Flex>
   )

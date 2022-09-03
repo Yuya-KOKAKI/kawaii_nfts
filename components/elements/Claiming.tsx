@@ -20,7 +20,7 @@ const Component = () => {
       >
         <VStack spacing={4}>
           <Spinner size="xl" color="white" />
-          <Text color="white">Claiming ...</Text>
+          <Text color="white">NFT請求中 ...</Text>
         </VStack>
       </Flex>
     </Box>

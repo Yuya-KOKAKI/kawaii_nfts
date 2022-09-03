@@ -19,33 +19,41 @@ const Component: React.FC = () => {
     <Flex
       maxW={'8xl'}
       justifyContent="center"
-      h="100%"
+      h="93%"
       alignItems="center"
       mx="auto"
     >
       <Fade>
-        <VStack spacing={6}>
-          <Box width="240px" height="240px">
+        <VStack spacing={5}>
+          <Box width="400px" height="400px">
             <NftImagesSlideShow />
           </Box>
-
+          <Text pt={2} fontSize="xl" textAlign={'center'}>
+              残りのNFT： {store.totalSupply - store.claimedSupply} 枚
+            </Text> 
+          <Text pt={1} fontSize="xl" textAlign={'center'}>
+              【↓ 残っているものからランダムにミント ↓】
+            </Text> 
           <div>
             {address ? (
-              <Button onClick={mint} disabled={store.isClaiming}>
+              <Button onClick={mint} colorScheme='facebook' size='lg' disabled={store.isClaiming}>
+                <Text fontSize="4xl" textAlign={'center'}>
                 {store.isClaiming
-                  ? 'claiming...'
-                  : `MINT (${store.claimPrice} ETH)`}
+                  ? 'クレーム中...'
+                  : `ミント実行 (${store.claimPrice} ETH)`}
+                </Text>
               </Button>
             ) : (
-              <Button onClick={connectWallet}>
-                <Text fontSize="xs">Connect Wallet</Text>
+              <Button onClick={connectWallet} colorScheme='facebook' size='lg'>
+                <Text fontSize="4xl" textAlign={'center'}>ウォレット接続</Text>
               </Button>
             )}
-            <Text pt={2} fontSize="xs" textAlign={'center'}>
-              {store.claimedSupply} / {store.totalSupply}
+            
+            <Text pt={5} fontSize="m" textAlign={'center'}>
+              ネットワーク： Ethereum MainNet 
             </Text>
-            <Text pt={2} fontSize="xs" textAlign={'center'}>
-              rinkeby testnet
+            <Text pt={1} fontSize="xs" textAlign={'center'}>
+              ※ミントは無料ですが、別途ガス代がかかります。
             </Text>
           </div>
         </VStack>

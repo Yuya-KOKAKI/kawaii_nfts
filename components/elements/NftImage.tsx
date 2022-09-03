@@ -31,8 +31,8 @@ const Component: React.FC<NftImageProps> = ({ imageUri }) => {
     </AspectRatio>
   ) : (
     <AspectRatio maxW="400px" ratio={1} backgroundColor="gray.50">
-      <Text fontSize="xs" color="gray.300">
-        noImage
+      <Text fontSize="m" color="gray.300">
+        請求出来るNFTがありません ..
       </Text>
     </AspectRatio>
   )

@@ -32,7 +32,7 @@ const Component: React.FC = () => {
         initial={{ x: 0, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ x: 0, opacity: 0 }}
-        transition={{ duration: 0.25 }}
+        transition={{ duration: 0.5 }}
       >
         <NftImage imageUri={token.metadata.image} />
       </motion.div>

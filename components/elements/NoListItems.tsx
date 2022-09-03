@@ -10,7 +10,7 @@ const Component = () => {
       mx="auto"
     >
       <VStack spacing={4}>
-        <Text>No Items</Text>
+        <Text>NFTがありません</Text>
       </VStack>
     </Flex>
   )
